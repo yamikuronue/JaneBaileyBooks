@@ -1,0 +1,51 @@
+---
+layout: default
+---
+
+<div class="home container">
+  <div  id="cta_div class="row">
+    <div" class="col-md-4 col-lg-4 col-xl-4">
+      <h1>Jane Bailey Books</h1>
+      <h2>Speculative fiction and short works</h2>
+    </div>
+    <div id="slideshow" ></a>>
+       <div>
+         <img src="/assets/slideshow/WolfboundCover_cropped-ad.png">
+       </div>
+       <div>
+         <img src="/assets/slideshow/cover_cropped-ad1-300x300.png">
+       </div>
+    </div>
+  </div>
+  
+  <h1 class="page-heading">Recent Updates</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+
+</div>
+
+<script>
+/* global $ */
+  $("#slideshow > div:gt(0)").hide();
+
+setInterval(function() { 
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+},  9000);
+</script>
