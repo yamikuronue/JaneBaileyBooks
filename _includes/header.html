@@ -2,19 +2,23 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+    <a class="site-title" href="{{ site.baseurl }}/"><img src="/assets/images/janebaileylogo.jpg" width=200></a>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-      </a>
-
-      <div class="trigger">
+    <nav id="topnav">
+      <ul class="nav nav-tabs">
         {% for my_page in site.pages %}
           {% if my_page.title %}
-          <a class="page-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+           {% if page.url == my_page.url %} 
+          <li class="nav-item active">
+            {% else %} 
+            <li class="nav-item">
+             {% endif %} 
+             <a class="nav-link" href="{{ my_page.url | prepend: site.baseurl }}">{{ my_page.title }}</a>
+         
+          </li>
           {% endif %}
         {% endfor %}
-      </div>
+      </ul>
     </nav>
 
   </div>

@@ -53,6 +53,23 @@ $on-laptop:        800px;
         "slideshow"
 ;
 
+//Navbar
+nav {
+    width: $content-width;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+div.wrapper {
+    position: relative;
+}
+ul.nav {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -81,6 +98,7 @@ $on-laptop:        800px;
 
 //Components
 @import "bootstrap/media";
+@import "bootstrap/navs";
 /*
 
 
@@ -89,7 +107,7 @@ $on-laptop:        800px;
 @import "bootstrap/dropdowns";
 @import "bootstrap/button-groups";
 @import "bootstrap/input-groups";
-@import "bootstrap/navs";
+
 @import "bootstrap/navbar";
 @import "bootstrap/breadcrumbs";
 @import "bootstrap/pagination";
