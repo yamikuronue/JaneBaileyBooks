@@ -1,41 +1,46 @@
 ---
 layout: default
 ---
-
-<div class="home container">
-  <div  id="cta_div" class="row">
-    <div class="col-md-4 col-lg-4 col-xl-4">
-      <h1>Jane Bailey Books</h1>
-      <h2>Speculative fiction and short works</h2>
-    </div>
-    <div id="slideshow" ></a>>
-       <div>
-         <img src="/assets/slideshow/WolfboundCover_cropped-ad.png">
-       </div>
-       <div>
-         <img src="/assets/slideshow/cover_cropped-ad1-300x300.png">
-       </div>
+<div clas="container">
+  <div class="home row">
+    <div  id="cta_div" class="row">
+      <div class="col-md-8 col-lg-8 col-xl-8">
+        <h1>Jane Bailey</h1>
+        <h3>Speculative fiction and short works</h3>
+        
+        <p>Welcome, readers! Jane Bailey writes primarily speculative fiction (fantasy and science fiction), ranging from short stories to novellas. </p>
+        <a href="http://eepurl.com/bY_2NP" class="btn btn-primary">Sign up for the Jane Bailey newsletter</a>
+      </div>
+      <div id="slideshow" ></a>>
+         <div>
+           <img src="/assets/slideshow/WolfboundCover_cropped-ad.png">
+         </div>
+         <div>
+           <img src="/assets/slideshow/cover_cropped-ad1-300x300.png">
+         </div>
+      </div>
     </div>
   </div>
   
-  <h1 class="page-heading">Recent Updates</h1>
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
-
+  <div class="row">
+    <div class="col-md-12">
+    <h1 class="page-heading">Recent Updates</h1>
+  
+    <ul class="post-list">
+      {% for post in site.posts %}
+        {% if forloop.index > 5 %}
+          {% break %}
+        {% endif %}
+        <li>
+           <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> (<span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>)
+        </li>
+      {% endfor %}
+    </ul>
+  
+    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+  </div>
+  </div>
 </div>
-
 <script>
 /* global $ */
   $("#slideshow > div:gt(0)").hide();

@@ -15,8 +15,8 @@ $base-line-height: 1.5;
 $spacing-unit:     30px;
 
 $text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$background-color: #FDF3E7;
+$brand-color:      #7a26a2;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -45,13 +45,6 @@ $on-laptop:        800px;
 
 
 
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting",
-        "slideshow"
-;
 
 //Navbar
 nav {
@@ -61,15 +54,18 @@ nav {
     display: block;
 }
 
-div.wrapper {
+div.wrapper, div.home {
     position: relative;
+}
+
+div.wrapper {
+   // background-color: white;
 }
 ul.nav {
     position: absolute;
     bottom: 0;
     right: 0;
 }
-
 
 /*!
  * Bootstrap v3.3.6 (http://getbootstrap.com)
@@ -95,6 +91,16 @@ ul.nav {
 @import "bootstrap/_tables";
 @import "bootstrap/_forms";
 @import "bootstrap/_buttons";
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "slideshow"
+;
+
+
 
 //Components
 @import "bootstrap/media";

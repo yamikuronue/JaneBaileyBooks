@@ -12,3 +12,6 @@ twitter_username: janebaileybooks
 markdown: kramdown
 sass:
     sass_dir: _sass
+    
+    
+exclude: [vendor]
