@@ -6,4 +6,5 @@ cat <<END >  ~/.ssh/known_hosts
 END
 
 scp -i id_rsa -r _site www.janebaileybooks.com:/home/travis/
-ssh -i id_rsa www.janebaileybooks.com mv -T /home/travis/_site /var/www/Sites/janeBaileyBooks
+ssh -i id_rsa www.janebaileybooks.com rm -rf /var/www/Sites/janeBaileyBooks/site
+ssh -i id_rsa www.janebaileybooks.com mv /home/travis/_site /var/www/Sites/janeBaileyBooks/site
