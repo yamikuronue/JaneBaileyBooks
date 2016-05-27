@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cat >  ~/.ssh/known_hosts <<<END
+cat <<END >  ~/.ssh/known_hosts
 # www.janebaileybooks.com SSH-2.0-OpenSSH_6.0p1 Debian-4+deb7u2
 |1|R8qCausXeSTAB4QGnZBG4YcWmq0=|j++hfA0Kl7D7ZKOtL1XFtbG7rMc= ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC4B2VAYqFA/uQJv3NXQmXIJuyQu2tcBRJLkqBWxHi+XggbKxB3gEk0ymGX9LeBaxKDPI1ZdLxJ7sDgdVA+P8Qle6CpNybIOlf26NR+OESp0S7iFv3KNWYj94d3xeVqwAZOPik2x6ACUKAsHswKvRAF1dpibaV8A1tRZcxGPjtReDSg+hORotQ/c6ewz8pb0nw6ZwIxkJqMY3oFG10MCSrU7GRtFcVp9wLDxaOb7jv4k6Jn2Gvta/xlQYn5Thr4/j7bSGExA6m0FNyK4YRdIlFx27oEwFQKiaBx24jv9eMFZzFwz8UmzTSLbUrcaekPFvJFp7ULjaz/5HG4zGZEJRlJ
 END
