@@ -1,2 +1,2 @@
-scp -i id_rsa -r _site 104.131.42.241 /home/travis/_site
-ssh -i id_rsa 104.131.42.241 mv -T /home/travis/_site /var/www/Sites/janeBaileyBooks
+scp -i id_rsa -r _site 104.131.42.241 /home/travis/
+ssh -i id_rsa -oStrictHostKeyChecking=no 104.131.42.241 mv -T /home/travis/_site /var/www/Sites/janeBaileyBooks
