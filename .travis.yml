@@ -4,6 +4,7 @@ rvm:
 before_script:
 - chmod +x ./script/cibuild
 - chmod +x ./script/deploy
+- chmod 600 id_rsa
 install: gem install jekyll html-proofer image_optim image_optim_pack
 script: "./script/cibuild"
 env:
