@@ -5,7 +5,7 @@ description: > # this means to ignore newlines until "baseurl:"
   Jane Bailey is a self-published speculative fiction writer; here you can find information about her published books,
   upcoming releases, and appearances. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "http://www.janebaileybooks.com" # the base hostname & protocol for your site
+url: "http://staging.janebaileybooks.com" # the base hostname & protocol for your site
 twitter_username: janebaileybooks
 
 # Build settings
