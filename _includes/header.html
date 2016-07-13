@@ -7,8 +7,8 @@
     <nav id="topnav">
       <ul class="nav nav-tabs">
         {% for my_page in site.pages %}
-          {% if my_page.title %}
-           {% if page.url == my_page.url %} 
+          {% if my_page.title and my_page.layout == "page" %}
+           {% if page.url == my_page.url or my_page.title == page.parent %} 
           <li class="nav-item active">
             {% else %} 
             <li class="nav-item">
