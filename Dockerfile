@@ -1,4 +1,4 @@
-FROM ruby 2.5-slim as builder
+FROM ruby/2.5-slim as builder
 RUN gem install --no-ri --no-rdoc image_optim image_optim_pack jekyll && mkdir -p /var/build && gem environment
 COPY ./ /var/build
 WORKDIR /var/build
