@@ -1,8 +1,8 @@
-FROM jekyll/jekyll as builder
-RUN gem install --no-ri --no-rdoc image_optim image_optim_pack && mkdir -p /var/build && gem environment
+FROM ruby 2.5-slim as builder
+RUN gem install --no-ri --no-rdoc image_optim image_optim_pack jekyll && mkdir -p /var/build && gem environment
 COPY ./ /var/build
 WORKDIR /var/build
-RUN /usr/gem/bin/image_optim assets/images/* && jekyll build
+RUN image_optim assets/images/* && jekyll build
 
 
 FROM kyma/docker-nginx
