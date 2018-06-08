@@ -1,5 +1,5 @@
 FROM jekyll/jekyll as builder
-RUN apk update && apk add image_optim && mkdir -p /var/build
+RUN gem install --no-ri --no-rdoc image_optim image_optim_pack && mkdir -p /var/build
 COPY ./ /var/build
 WORKDIR /var/build
 RUN image_optim assets/images/* && jekyll build
