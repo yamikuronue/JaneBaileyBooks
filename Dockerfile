@@ -2,7 +2,7 @@ FROM ruby:2.5-slim as builder
 RUN apt-get update \
     && apt-get install -y \
         build-essential \
-    && gem install --no-document --no-rdoc image_optim image_optim_pack jekyll \
+    && gem install --no-document image_optim image_optim_pack jekyll \
     && mkdir -p /var/build
 
 COPY ./ /var/build
