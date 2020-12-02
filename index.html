@@ -7,8 +7,8 @@ layout: default
       <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xl-8">
         <h1>Jane Bailey</h1>
         <h3>Speculative fiction and short works</h3>
-        
-        <p>Welcome, readers! Jane Bailey offers innovative, queer fantasy for today's discerning reader. She tends toward short fiction, but has published several novels in both ebook and paperback format.</p>
+
+        <p>Welcome, readers! Jane Bailey offers innovative, queer fantasy for today's discerning reader. They tends toward short fiction, but have published several novels in both ebook and paperback format.</p>
         <a href="https://www.patreon.com/bePatron?u=2864006" data-patreon-widget-type="become-patron-button">Become a Patron!</a><script async src="https://c6.patreon.com/becomePatronButton.bundle.js"></script>
       </div>
       <div id="slideshow" ></a>>
@@ -21,11 +21,11 @@ layout: default
       </div>
     </div>
   </div>
-  
+
   <div class="row">
     <div class="col-md-12">
     <h1 class="page-heading">Recent Updates</h1>
-  
+
     <ul class="post-list">
       {% for post in site.posts %}
         {% if forloop.index > 5 %}
@@ -36,18 +36,18 @@ layout: default
         </li>
       {% endfor %}
     </ul>
-  
+
     <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
   </div>
   </div>
-  
+
   <a href="http://eepurl.com/bY_2NP" class="btn btn-primary">Sign up for the Jane Bailey newsletter</a>
 </div>
 <script>
 /* global $ */
   $("#slideshow > div:gt(0)").hide();
 
-setInterval(function() { 
+setInterval(function() {
   $('#slideshow > div:first')
     .fadeOut(1000)
     .next()
