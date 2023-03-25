@@ -13,14 +13,13 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
-    - name: Jekyll Build
-      uses: kshehadeh/jekyll-s3-action@0.1
+    - name: Jekyll Action
+      uses: lemonarc/jekyll-action@1.0.0
     - name: HTMLProofer
-      # You may pin to the exact commit or the version.
       uses: chabad360/htmlproofer@v2
       with:
         # The directory to scan
-        directory: "{{ github.workspace }}/_site"
+        directory: "./_site"
     - name: Install SSH Key
       uses: shimataro/ssh-key-action@v2
       with:
@@ -41,6 +40,6 @@ jobs:
         # private ssh key registered on the server
         PRIVATE_SSH_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         # path of the file-s to deploy
-        REPOSITORY_PATH: ${{ github.workspace }}/_site
+        REPOSITORY_PATH: ./_site
         # server path / destination
         SERVER_PATH: /var/www/janebaileybooks.com/
