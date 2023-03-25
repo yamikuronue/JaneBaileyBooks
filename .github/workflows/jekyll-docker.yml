@@ -12,9 +12,10 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Jekyll Action
-      uses: lemonarc/jekyll-action@1.0.0
+    - name: checkout
+      uses: actions/checkout@v2
+    - name: jekyll build
+      uses: mbursi/jekyll-build-only-action@v1.0.0
     - name: HTMLProofer
       uses: chabad360/htmlproofer@v2
       with:
